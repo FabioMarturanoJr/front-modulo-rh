@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import './Login.css';
 import { goTo } from '../../Routes/Coordinator';
+import { Link } from 'react-router-dom';
+import './Login.css';
 
 const Login = () => {
   var [redirect, setRedirect] = useState(false)
@@ -16,8 +17,9 @@ const Login = () => {
       <button onClick={() => setRedirect(true)}>
         Users
       </button>
+      <Link to='/create-user'>Cadastrar Usuario</Link>
     </div>
   )
 }
 
-export default Login;
+export default Login
