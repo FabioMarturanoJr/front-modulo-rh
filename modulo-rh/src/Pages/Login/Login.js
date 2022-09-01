@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Login.css';
-import { Link } from 'react-router-dom';
+import { goTo } from '../../Routes/Coordinator';
 
 const Login = () => {
+  var [redirect, setRedirect] = useState(false)
+
   return (
     <div>
+      {
+        redirect && goTo('users')
+      }
       <h1>
         Login
       </h1>
-      <Link to='/users'>Users</Link>
+      <button onClick={() => setRedirect(true)}>
+        Users
+      </button>
     </div>
   )
 }

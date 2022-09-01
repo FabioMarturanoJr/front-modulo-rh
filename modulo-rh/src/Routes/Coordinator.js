@@ -1,7 +1,5 @@
-export const goToUsers = (history) => {
-    history.push('/users')
-}
+import { Navigate } from "react-router-dom"
 
-export const goToLogin = (history) => {
-    history.push('/')
+export const goTo = (path) => {
+    return <Navigate  to={`/${path}`}/>
 }
