@@ -11,7 +11,8 @@ const Users = () => {
     .get('/user')
     .then((resp) => setUsers(resp.data))
     .catch((err) => {
-      console.error("Error" + err)
+      console.error(err)
+      alert(err)
     })
   }, [])
 
