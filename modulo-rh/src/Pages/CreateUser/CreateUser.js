@@ -21,15 +21,16 @@ const CreateUser = () => {
     })
     .then(() => setRedirect(true))
     .catch((err) => {
-      console.error("Error" + err)
+      console.error(err)
+      alert(err)
     })
   }
 
   return (
-    <div>
+    <div className='container'>
       { redirect && goTo('') }
 
-      <form onSubmit={savaUser}>
+      <form>
         <input type='text' 
           onChange={(e) => setEmail(e.target.value)}
           placeholder='Usuario'
@@ -38,9 +39,17 @@ const CreateUser = () => {
           onChange={(e) => setPassword(e.target.value)}
           placeholder='Senha'
         />
-        <button>Cadastro</button>
+        <div className='buttons'>
+          <button 
+            className='cancel'
+            type="cancel"
+            onClick={() => setRedirect(true)}> Cancelar </button>
+          <button
+            className='submit'
+            type="submit"
+            onClick={savaUser}>Salvar</button>
+        </div>
       </form>
-      <Link to='/'>Login</Link>
     </div>
   )
 };

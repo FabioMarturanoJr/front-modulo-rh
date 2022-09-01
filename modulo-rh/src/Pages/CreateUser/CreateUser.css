@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(157, 154, 154);
+}
+
+.container {
+    padding: 20%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cancel {
+    color: rgb(222, 15, 15);
+}
+
+.submit {
+    color: green;
+}
+
+.cancel, .submit {
+    width: 40%;
+    padding: 2%;
+}
+
+form {
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 8%;
+    border-radius: 4px;
+    height: 150px;
+    background-color: rgb(232, 226, 225);
+}
+
+input {
+    height: 30px;
+}
